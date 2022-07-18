@@ -21,7 +21,8 @@ int main()
    matrix->cols = 6;
 
    FindFiguresSolver findFiguresSolver;
-   cout << "The number of individual figures is: " << findFiguresSolver.findNumberOfFigures(*matrix);
+   int numberOfIndividualFigures = findFiguresSolver.findNumberOfFigures(*matrix);
+   cout << "The number of individual figures is: " << numberOfIndividualFigures;
 
    delete [] matrix->data[0];
    delete [] matrix->data[1];
@@ -30,7 +31,6 @@ int main()
    delete [] matrix->data[4];
    delete [] matrix->data[5];
    delete [] matrix->data[6];
-   // delete[] matrix->data;
    delete matrix;
 }
 

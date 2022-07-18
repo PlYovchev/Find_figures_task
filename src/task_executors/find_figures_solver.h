@@ -4,18 +4,21 @@ using namespace std;
 
 const int FigureMarker = 1;
 
-struct Matrix {
+struct Matrix 
+{
    int **data;
    size_t rows;
    size_t cols;
 };
 
-struct Cell {
+struct Cell 
+{
    size_t row;
    size_t column;
 };
 
-class FindFiguresSolver {
+class FindFiguresSolver 
+{
    public:
       /**
        * @brief Finds the number of individual figures in the provided space;
