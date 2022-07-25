@@ -34,6 +34,7 @@ int FindFiguresSolver::findNumberOfFigures(Matrix& matrix)
    {
       for (size_t j = 0; j < matrix.cols; ++j) 
       {
+         
          Cell cell = { i, j };
          if (isCellMarked(matrix, cell)) 
          {
@@ -64,7 +65,9 @@ int FindFiguresSolver::findNumberOfFigures(Matrix& matrix)
 
             markedFiguresMatrix[i+1][j+1] = figureNumber;
          }
+         cout << matrix.data[i][j] << " ";
       }
+      cout << endl;
    }
    return individualFigures.size();
 }
