@@ -39,6 +39,7 @@ int FindFiguresSolver::findNumberOfFigures(Matrix& matrix)
          if (isCellMarked(matrix, cell)) 
          {
             int figureNumber;
+            // Check if there is any numbers identifying figures next to this cell.
             if(isFigureAdjacentToCell(matrix, cell)) 
             {
                int leftCellValue = markedFiguresMatrix[cell.row][cell.column+1];
@@ -65,7 +66,7 @@ int FindFiguresSolver::findNumberOfFigures(Matrix& matrix)
 
             markedFiguresMatrix[i+1][j+1] = figureNumber;
          }
-         cout << matrix.data[i][j] << " ";
+         cout << markedFiguresMatrix[i+1][j+1] << " ";
       }
       cout << endl;
    }

@@ -8,6 +8,7 @@ class JsonTestsLoader
 {
     public:
         JsonTestsLoader(string testResourceFilePath);
+        ~JsonTestsLoader();
         Matrix getTestCase(int number);
         int getTestCasesCount();
 

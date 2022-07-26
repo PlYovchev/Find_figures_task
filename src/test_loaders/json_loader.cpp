@@ -51,3 +51,15 @@ int JsonTestsLoader::getTestCasesCount()
 {
     return this->testMatrixes.size();
 }
+
+JsonTestsLoader::~JsonTestsLoader() 
+{
+    for (int i = 0; i < this->testMatrixes.size(); ++i)
+    {
+        for (int j = 0; j < this->testMatrixes[i].rows; ++j)
+        {
+            delete[] this->testMatrixes[i].data[j];
+        }
+        delete[] this->testMatrixes[i].data;
+    }
+}
